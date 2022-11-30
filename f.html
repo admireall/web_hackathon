@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="stylesheet" href="{% static 'home.js' %}">
+</head>
+
+<body>
+    <header class="header-area">
+        <!-- site-navbar start -->
+        <div class="navbar-area">
+            <div class="container">
+                <nav class="site-navbar">
+                    <!-- site logo -->
+                    <a href="#home" class="site-logo "><img class="img" src="https://res.cloudinary.com/koushika/image/upload/v1669541223/ark-low-resolution-logo-white-on-black-background_j62sr0.jpg"></a>
+
+                    <!-- site menu/nav -->
+                    <ul style="margin:auto;">
+                        <li><a  class ="nav-link" href="{% url 'student_app:home' %}" style="font-family:Black Ops One;">>home</home></a></li>
+                        <li><a  class ="nav-link" href="{% url 'student_app:login' %}" style="font-family:Black Ops One;">>Login</home></a></li>
+                        <li><a class ="nav-link" href="{% url 'student_app:details' %}" style="font-family:Black Ops One;">>Get Student Details</a></li>
+                        <li><a class ="nav-link" href="{% url 'student_app:faculty' %}" style="font-family:Black Ops One;">>Faculty details</a></li>
+                        <li><a class ="nav-link" href="{% url 'student_app:address' %}" style="font-family:Black Ops One;">>Navigation</a></li>
+                    </ul>
+
+                    <!-- nav-toggler for mobile version only -->
+                    <button class=" nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div><!-- navbar-area end -->
+
+        <div class="intro-area">
+            <div class="container">
+
+            </div>
+        </div>
+    </header>
+    <div class="img">
+
+    </div>
+    <div class="map">
+
+    </div>
+    <div class="contact">
+
+    </div>
+</body>
+
+</html>
+ 
