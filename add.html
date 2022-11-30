@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'add2.css' %}">
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body >
+    <header>
+        <img style="height:70px; width:200px;" src="https://res.cloudinary.com/koushika/image/upload/v1669791792/sreenidhi-logo_kyzkky.png" />
+
+        <input type="checkbox" class="nav-toggle" id="nav-toggle">
+        <nav>
+            <ul>
+                <li><a  class ="nav-link" href="{% url 'student_app:home' %}" style="font-family:Black Ops One;">>home</home></a></li>
+                <li><a  class ="nav-link" href="{% url 'student_app:login' %}" style="font-family:Black Ops One;">>Login</home></a></li>
+                <li><a class ="nav-link" href="{% url 'student_app:details' %}" style="font-family:Black Ops One;">>Get Student Details</a></li>
+                <li><a class ="nav-link" href="{% url 'student_app:faculty' %}" style="font-family:Black Ops One;">>Faculty details</a></li>
+                <li><a class ="nav-link" href="{% url 'student_app:address' %}" style="font-family:Black Ops One;">>Navigation</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>
+    <form method='POST'>
+    <div style="background-size:cover ; background-color: black;width:100vw">
+    <form autocomplete='off' class='form'>
+        {% csrf_token %}
+       <div style="background-size:cover ; background-color: black;width:100vw"> 
+        <div class='control'>
+            <h1>
+                REGISTRATION FORM
+            </h1>
+        </div>
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px"> FIRST NAME</p>
+            </div>
+           
+        </div>
+        
+        <div class='control'>
+            <h1>
+                REGISTRATION FORM
+            </h1>
+        </div>
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px"> FIRST NAME</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='First_Name' placeholder='First Name' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">LAST NAME</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='Last_Name' placeholder='Last Name' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p>DATE OF BIRTH :</p>
+        </div>
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">DATE</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='Birthday_Date' placeholder='Date' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">MONTH</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='Birthday_Month' placeholder='Month' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">YEAR</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='Birthday_Year' placeholder='Year' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">EMAIL ID</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='Email_Id' placeholder='Email Id' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">MOBILE NO</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='Mobile_Number' placeholder='Mobile No' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">Roll NO</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='Roll_no' placeholder='Roll No' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">BRANCH NAME</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='Class_Name' placeholder='Class Name' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">SECTION NAME</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='Section_name' placeholder='Section Name' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">GENDER</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='Gender' placeholder='Gender' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">ADDRESS</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='Address' placeholder='Address' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">CITY</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='City' placeholder='City' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">PIN CODE</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='Pin_Code' placeholder='Pincode' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">STATE</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='State' placeholder='State' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">SKILLS</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='hobbies' placeholder='Skills' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">ATTENDANCE</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='attendance' placeholder='Attendance' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div>
+                <p style="padding:10px; width:120px">COMMENTS</p>
+            </div>
+            <div style="width:300px;" class='control block-cube block-input'>
+                <input name='comments' placeholder='Comments' type='text'>
+                <div class='bg-top'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                    <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                    <div class='bg-inner'></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="d-flex flex-row">
+                <p>MARKS</p>
+            </div>
+            <div class="d-flex flex-column">
+                <div>
+                    <div class="d-flex flex-row">
+                        <p style="width:80px">SL.NO</p>
+                        <P style="width:160px">SEMISTER</P>
+                        <P style="width:300px">CGPA</P>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <p style="width:80px">1</p>
+                        <p style="width:160px">Sem-1</p>
+                        <div style="width:300px;" class='control block-cube block-input'>
+                            <input name='sem1' placeholder='CGPA' type='text'>
+                            <div class='bg-top'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg-right'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg'>
+                                <div class='bg-inner'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <p style="width:80px">2</p>
+                        <p style="width:160px">Sem-2</p>
+                        <div style="width:300px;" class='control block-cube block-input'>
+                            <input name='sem2' placeholder='CGPA' type='text'>
+                            <div class='bg-top'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg-right'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg'>
+                                <div class='bg-inner'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="d-flex flex-row">
+                <p>PRESENT MARKS</p>
+            </div>
+            <div class="d-flex flex-column">
+                <div>
+                    <div class="d-flex flex-row">
+                        <p style="width:100px">S.NO</p>
+                        <P style="width:250px;">SEMISTER</P>
+                        <P style="width:150px;">BEE</P>
+                        <P style="width:150px;">JAVA</P>
+                        <P style="width:150px;">UHV</P>
+                        <P style="width:150px;">SS</P>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <p style="width:60px">1</p>
+                        <p style="width:100px">Sem-3</p>
+                        <div style="width:65px;" class='control block-cube block-input'>
+                            <input name='bee' placeholder='BEE' type='text'>
+                            <div class='bg-top'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg-right'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg'>
+                                <div class='bg-inner'></div>
+                            </div>
+                        </div>
+                        <div style="width:65px;" class='control block-cube block-input'>
+                            <input name='java' placeholder='JAVA' type='text'>
+                            <div class='bg-top'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg-right'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg'>
+                                <div class='bg-inner'></div>
+                            </div>
+                        </div>
+                        <div style="width:65px;" class='control block-cube block-input'>
+                            <input name='uhv' placeholder='UHV' type='text'>
+                            <div class='bg-top'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg-right'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg'>
+                                <div class='bg-inner'></div>
+                            </div>
+                        </div>
+                        <div style="width:65px;" class='control block-cube block-input'>
+                            <input name='softskills' placeholder='SS' type='text'>
+                            <div class='bg-top'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg-right'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg'>
+                                <div class='bg-inner'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <p style="width:100px">S.NO</p>
+                        <P style="width:250px;">SEMISTER</P>
+                        <P style="width:150px;">DM</P>
+                        <P style="width:150px;">AEC</P>
+                        <P style="width:150px;">CVT</P>
+                        <P style="width:150px;">CGPA</P>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <p style="width:60px">1</p>
+                        <p style="width:100px">Sem-3</p>
+                        <div style="width:65px;" class='control block-cube block-input'>
+                            <input name='dm' placeholder='dm' type='text'>
+                            <div class='bg-top'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg-right'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg'>
+                                <div class='bg-inner'></div>
+                            </div>
+                        </div>
+                        <div style="width:65px;" class='control block-cube block-input'>
+                            <input name='aec' placeholder='AEC' type='text'>
+                            <div class='bg-top'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg-right'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg'>
+                                <div class='bg-inner'></div>
+                            </div>
+                        </div>
+                        <div style="width:65px;" class='control block-cube block-input'>
+                            <input name='cvt' placeholder='CVT' type='text'>
+                            <div class='bg-top'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg-right'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg'>
+                                <div class='bg-inner'></div>
+                            </div>
+                        </div>
+                        <div style="width:65px;" class='control block-cube block-input'>
+                            <input name='sem3' placeholder='CGPA' type='text'>
+                            <div class='bg-top'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg-right'>
+                                <div class='bg-inner'></div>
+                            </div>
+                            <div class='bg'>
+                                <div class='bg-inner'></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+
+       
+                   
+        
+                
+            </div>
+           
+                </button>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+</form>
+</body>
+
+</html>
